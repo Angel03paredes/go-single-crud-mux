@@ -1,0 +1,170 @@
+*{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    
+}
+
+body{
+   margin:0px
+}
+
+:root{
+    --primary:#171B24;
+    --secondary:#FE3D00;
+    --update: rgb(18, 174, 247);
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.p-3{
+    padding: 1.5rem;
+}
+
+.container{
+    padding: 0rem 3rem;
+}
+
+.li-nav{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.li-nav>a{
+    padding: 0px 10px;
+}
+
+.brand{
+    font-size: 2rem;
+}
+
+.navbar{
+    
+    align-items: center;
+    background-color: var(--primary);
+}
+
+.navbar *{
+    color: #FFF;
+}
+
+.bg-primary{
+    background-color: var(--primary);
+    color: #FFF;
+}
+
+.bg-secondary{
+    background-color: var(--secondary);
+    color: #FFF;
+    font-size: 1rem;
+
+}
+
+.bg-secondary:hover{
+    background-color: #FFF;
+    color: var(--secondary);
+
+}
+
+.shadow{
+    box-shadow: -3px 4px 32px -1px rgba(0,0,0,0.62);
+-webkit-box-shadow: -3px 4px 32px -1px rgba(0,0,0,0.62);
+-moz-box-shadow: -3px 4px 32px -1px rgba(0,0,0,0.62);
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-gap: 10px;
+}
+
+.col{
+   width: 100%;
+   height: auto;
+}
+
+input[type="text"] , input[type="password"]{
+    width: -webkit-fill-available;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #CBCBD9;
+    font-size: 1.15rem;
+}
+
+input[type="submit"]{
+    width: -webkit-fill-available;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border:none;
+}
+
+@media (max-width: 600px) {
+    .row{
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        grid-gap: 10px;
+    }
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 10% 30% 30% 15% 15%;
+    align-items: center;
+    justify-items: center;
+    width: -webkit-fill-available;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0px;
+    background-color: #CBCBD9;
+    border-radius: 0.5rem;
+    overflow:hidden;
+}
+
+.id{
+    font-weight: bolder;
+}
+
+.bg-red{
+    background-color: #d31f08;
+    color: #FFF;
+}
+
+.btn{
+    border-radius: 0.5rem;
+    padding: 4px 8px;
+}
+
+.btn:hover{
+    cursor: context-menu;
+}
+
+.bg-red:hover{
+    background-color: #FFF;
+    color: #d31f08;
+}
+
+.bg-update{
+    background-color: var(--update);
+    color: #FFF;
+    font-size: 1rem;
+
+}
+
+.bg-update:hover{
+    background-color: #FFF;
+    color: var(--update);
+
+}

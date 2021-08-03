@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function update(props){
+            document.getElementById('form').action = "/update"
+            document.getElementById("name").value = props.Name 
+            document.getElementById("email").value = props.Email 
+            document.getElementById("pass").value = props.Password
+            document.getElementById("id").value = props.ID
+        }
+    </script>
+    
+    <nav class="navbar shadow container d-flex justify-content-between">
+        <a href="/" class="brand">MUX</a>
+        <ul class="d-flex">
+            <li class="li-nav"><a href="/">Home</a></li>
+            <li class="li-nav"><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="row p-3">
+            <div class="col ">
+                <form action="/create-user" method="POST" id="form" class="p-3">
+                    <input type="hidden" name="id" id="id">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="text" name="email" id="email" placeholder="Email">
+                    <input type="password" id="pass" name="password" placeholder="Password" id="">
+                    <input type="submit" class="bg-secondary" value="Save">
+                </form>
+            </div>
+            <div class="col">
+               <div class="p-3">
+                <div class="card">
+                    <strong>Id</strong>
+                    <strong>Name</strong>
+                    <strong>Email</strong>
+                   
+                </div>
+                {{range .Users}}
+                <div class="card">
+                    <div class="id">{{.ID}}</div>
+                    <div class="name">{{.Name}}</div>
+                    <div class="email">{{.Email}}</div>
+                    <div class="btn bg-red" onclick="javascript:location.href = '/delete?id={{.ID}}' " >Delete</div>
+                    <div class="btn bg-update" onclick="update({{.}})">Update</div>
+                </div>
+                {{end}}
+               </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
